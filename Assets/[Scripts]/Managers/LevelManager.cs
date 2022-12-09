@@ -20,10 +20,10 @@ public class LevelManager : CustomBehaviour
     {
         currentLevel = PlayerPrefs.GetInt("Level", 0);
         //  level_text.text = "Level " + (currentLevel + 1);
-        if (currentLevel > 2)
+        if (currentLevel > 1)
         {
             Random.InitState(System.DateTime.Now.Millisecond);
-            currentLevel = Random.Range(1, 4);
+            currentLevel = Random.Range(1, 2);
             level = (GameObject)Instantiate(Resources.Load("Level" + currentLevel));
         }
         else
